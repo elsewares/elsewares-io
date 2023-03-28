@@ -3,8 +3,37 @@
     src: url('../fonts/Raleway-VariableFont_wght.ttf') format('truetype');
 }
 
+#listicle {
+    padding-top: 30px;
+}
+
 #listicle > li {
     font-weight: lighter;
     font-size: 2em;
     font-family: 'Raleway', serif !important;
+    opacity: 0;
+}
+
+@keyframes listicleseq {
+    100% { opacity: 1; }
+}
+
+#listicle li {
+    animation: listicleseq .5s forwards;
+}
+
+#listicle li:nth-child(1) {
+    animation-delay: .5s;
+}
+
+#listicle li:nth-child(2) {
+    animation-delay: 1s;
+}
+
+#listicle li:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+#listicle li:nth-child(4) {
+    animation-delay: 2.0s;
 }
